@@ -743,7 +743,6 @@ export class PedometerSleepSegment extends DeviceDataBase {
 }
 
 export class PedometerHeartrateSegment extends DeviceDataBase {
-
   constructor(date: Date, rate: number) {
     super();
     this.date = date;
