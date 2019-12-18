@@ -3,13 +3,15 @@ import {Routes, RouterModule} from '@angular/router';
 import {HeartratechartComponent} from './heartratechart/heartratechart.component';
 import {SleepchartComponent} from './sleepchart/sleepchart.component';
 import {GlucosechartComponent} from './glucosechart/glucosechart.component';
+import {SplitglucosechartComponent} from './splitglucosechart/splitglucosechart.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo: '/glucose', pathMatch: 'full'},
   {path: 'glucose', component: GlucosechartComponent},
   {path: 'sleep', component: SleepchartComponent},
-  {path:'heartrate', component: HeartratechartComponent},
+  {path: 'split', component: SplitglucosechartComponent},
+  {path: 'heartrate', component: HeartratechartComponent},
   {path: '**', redirectTo: '/glucose', pathMatch: 'full'}
 
 

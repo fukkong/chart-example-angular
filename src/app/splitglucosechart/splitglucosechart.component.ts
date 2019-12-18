@@ -1,15 +1,15 @@
 import {Component, OnInit} from '@angular/core';
+import * as moment from 'moment';
 import {GlucosemeterDaySummary} from '@AutochekCommon/vanilla/objects/device-data-object';
 import {AutochekChartOption} from '@AutochekChart/chart.option';
-import * as moment from 'moment';
 import {drawGlucoseChart} from '@AutochekChart/glucose-chart';
 
 @Component({
-  selector: 'app-glucosechart',
-  templateUrl: './glucosechart.component.html',
-  styleUrls: ['./glucosechart.component.css']
+  selector: 'app-splitglucosechart',
+  templateUrl: './splitglucosechart.component.html',
+  styleUrls: ['./splitglucosechart.component.css']
 })
-export class GlucosechartComponent implements OnInit {
+export class SplitglucosechartComponent implements OnInit {
 
   constructor() {
   }
@@ -26,9 +26,34 @@ export class GlucosechartComponent implements OnInit {
         a_meal_max: 200,
         sleep_min: 80,
         sleep_max: 120
-      }
+      },
+      glucoseChart: 'beforeMeal'
     };
-    drawGlucoseChart('glucose', glucoseData, glucoseMinMax);
+    const afterMeal: AutochekChartOption = {
+      glucose: {
+        b_meal_min: 80,
+        b_meal_max: 120,
+        a_meal_min: 100,
+        a_meal_max: 200,
+        sleep_min: 80,
+        sleep_max: 120
+      },
+      glucoseChart: 'afterMeal'
+    };
+    const beforeSleep: AutochekChartOption = {
+      glucose: {
+        b_meal_min: 80,
+        b_meal_max: 120,
+        a_meal_min: 100,
+        a_meal_max: 200,
+        sleep_min: 80,
+        sleep_max: 120
+      },
+      glucoseChart: 'beforeSleep'
+    };
+    drawGlucoseChart('before', glucoseData, glucoseMinMax);
+    drawGlucoseChart('after', glucoseData, afterMeal);
+    drawGlucoseChart('sleep', glucoseData, beforeSleep);
   }
 
 }

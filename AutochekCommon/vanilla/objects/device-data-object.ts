@@ -17,8 +17,7 @@ export function stdev(values: any[]): number {
   const diffs = values.map((val) => val - avg);
   const squares = diffs.map((val) => val * val);
   const sos = squares.reduce((prev, next) => prev + next, 0);
-  const rtnStdev = Math.sqrt(sos);
-  return rtnStdev;
+  return Math.sqrt(sos);
 }
 
 export function getArrayStatistic(arr: number[]): ArrayStatistic {
