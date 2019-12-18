@@ -1,0 +1,3 @@
+[submodule "AutochekChart"]
+	path = AutochekChart
+	url = https://github.com/navelist89/AutochekChart.git

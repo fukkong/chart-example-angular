@@ -1,6 +1,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths":{
+      "@AutochekChart/*": [
+        "AutochekChart/*"
+      ],
+      "@AutochekCommon/*": [
+        "AutochekCommon/*"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
