@@ -1,2 +1,6 @@
-<h2>{{title}}</h2>
+<div style="width: 100%; height: 50px;">
+  <span [routerLink]="['/heartrate']">심박차트 </span>
+  <span [routerLink]="['/glucose']">혈당차트 </span>
+  <span [routerLink]="['/sleep']">수면차트 </span>
+</div>
 <router-outlet></router-outlet>
