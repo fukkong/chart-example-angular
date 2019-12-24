@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {drawHeartRateChart} from '@AutochekChart/heart-rate-chart';
+import {drawHeartRateChart, drawSecondHeartRateChart} from '@AutochekChart/heart-rate-chart';
 import {PedometerHeartrateSegment} from '@AutochekCommon/vanilla/objects/device-data-object';
 
 @Component({
@@ -15,6 +15,7 @@ export class HeartratechartComponent implements OnInit {
   ngOnInit() {
     const heartrateData: PedometerHeartrateSegment[] = makeHeartRateTestCase(realdata);
     drawHeartRateChart('heartrate', heartrateData);
+    drawSecondHeartRateChart('heartrate2', heartrateData);
   }
 
 }
