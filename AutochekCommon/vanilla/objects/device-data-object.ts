@@ -699,6 +699,8 @@ export class PedometerSleepSummary extends DeviceDataBase {
   constructor(date: Date, public deepSleep: number, public lightSleep: number) {
     super();
     this.date = moment(date).startOf('day').toDate();
+    this.lightSleep = lightSleep;
+    this.deepSleep = deepSleep;
   }
 
   static deserializer(value: any): PedometerSleepSummary {
