@@ -5,6 +5,7 @@ import {SleepchartComponent} from './sleepchart/sleepchart.component';
 import {GlucosechartComponent} from './glucosechart/glucosechart.component';
 import {SplitglucosechartComponent} from './splitglucosechart/splitglucosechart.component';
 import {PedometerchartComponent} from './pedometerchart/pedometerchart.component';
+import {BodyscalechartComponent} from './bodyscalechart/bodyscalechart.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'split', component: SplitglucosechartComponent},
   {path: 'heartrate', component: HeartratechartComponent},
   {path: 'pedometer', component: PedometerchartComponent},
+  {path: 'bodyscale', component: BodyscalechartComponent},
   {path: '**', redirectTo: '/glucose', pathMatch: 'full'}
 ];
 

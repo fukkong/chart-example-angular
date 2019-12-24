@@ -8,6 +8,7 @@ import { HeartratechartComponent } from './heartratechart/heartratechart.compone
 import { GlucosechartComponent } from './glucosechart/glucosechart.component';
 import { SplitglucosechartComponent } from './splitglucosechart/splitglucosechart.component';
 import { PedometerchartComponent } from './pedometerchart/pedometerchart.component';
+import { BodyscalechartComponent } from './bodyscalechart/bodyscalechart.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PedometerchartComponent } from './pedometerchart/pedometerchart.compone
     HeartratechartComponent,
     GlucosechartComponent,
     SplitglucosechartComponent,
-    PedometerchartComponent
+    PedometerchartComponent,
+    BodyscalechartComponent
   ],
   imports: [
     BrowserModule,
