@@ -9,14 +9,14 @@ import {BodyscalechartComponent} from './bodyscalechart/bodyscalechart.component
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/glucose', pathMatch: 'full'},
+  {path: '', redirectTo: '/heartrate', pathMatch: 'full'},
   {path: 'glucose', component: GlucosechartComponent},
   {path: 'sleep', component: SleepchartComponent},
   {path: 'split', component: SplitglucosechartComponent},
   {path: 'heartrate', component: HeartratechartComponent},
   {path: 'pedometer', component: PedometerchartComponent},
   {path: 'bodyscale', component: BodyscalechartComponent},
-  {path: '**', redirectTo: '/glucose', pathMatch: 'full'}
+  {path: '**', redirectTo: '/heartrate', pathMatch: 'full'}
 ];
 
 export const AppRouterModule = RouterModule.forRoot(routes, {useHash: true});

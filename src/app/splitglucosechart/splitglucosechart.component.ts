@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import * as moment from 'moment';
-import {GlucosemeterDaySummary} from '@AutochekCommon/vanilla/objects/device-data-object';
+import {GlucosemeterDaySummary} from 'autochek-base//objects/device-data-object';
 import {AutochekChartOption} from '@AutochekChart/chart.option';
 import {drawGlucoseChart} from '@AutochekChart/glucose-chart';
 

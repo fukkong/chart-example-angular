@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {GlucosemeterDaySummary} from '@AutochekCommon/vanilla/objects/device-data-object';
+import {GlucosemeterDaySummary} from 'autochek-base/objects/device-data-object';
 import {AutochekChartOption} from '@AutochekChart/chart.option';
 import * as moment from 'moment';
 import {drawGlucoseChart} from '@AutochekChart/glucose-chart';
@@ -19,6 +19,7 @@ export class GlucosechartComponent implements OnInit {
     const start = moment(end).subtract(31, 'day').toDate();
     const glucoseData: GlucosemeterDaySummary[] = makeTestCaseForGlucose(start, end);
     const glucoseMinMax: AutochekChartOption = {
+      glucoseChart: 'beforeMeal',
       glucose: {
         b_meal_min: 80,
         b_meal_max: 120,

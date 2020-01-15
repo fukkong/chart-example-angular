@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {drawSleepChart} from '@AutochekChart/sleep-segment-chart';
 import * as moment from 'moment';
-import {PedometerSleepSegment, PedometerSleepSummary} from '@AutochekCommon/vanilla/objects/device-data-object';
+import {PedometerSleepSegment, PedometerSleepSummary} from 'autochek-base/objects/device-data-object';
 
 @Component({
   selector: 'app-sleepchart',
@@ -44,7 +44,7 @@ function makeSleepSummaryTestCase(days: number) {
     tempTime = new Date(moment(tempTime).subtract(1, 'days').toDate());
     const deepSleepTime = Math.floor(Math.random() * 180 + 100);
     const lightSleepTime = Math.floor(Math.random() * 240 + 60);
-    console.log(deepSleepTime,lightSleepTime)
+    console.log(deepSleepTime, lightSleepTime);
     const tempPedometer = new PedometerSleepSummary(tempTime, deepSleepTime, lightSleepTime);
     rtnPedometerList.push(tempPedometer);
   }

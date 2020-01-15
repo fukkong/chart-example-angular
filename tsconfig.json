@@ -7,6 +7,9 @@
       ],
       "@AutochekCommon/*": [
         "AutochekCommon/*"
+      ],
+      "autochek-base/*": [
+        "./Autochek-base/*"
       ]
     },
     "baseUrl": "./",

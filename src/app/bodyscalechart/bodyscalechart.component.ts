@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {drawBodyScaleChart} from '@AutochekChart/body-scale-chart';
 import * as moment from 'moment';
-import {BodyscaleMeasurement} from '@AutochekCommon/vanilla/objects/device-data-object';
+import {BodyscaleMeasurement} from 'autochek-base//objects/device-data-object';
 
 @Component({
   selector: 'app-bodyscalechart',
@@ -22,7 +22,6 @@ export class BodyscalechartComponent implements OnInit {
     drawBodyScaleChart('visceral', bodyscale, {bodyScale: 'visceral'});
     drawBodyScaleChart('bone', bodyscale, {bodyScale: 'bone'});
     drawBodyScaleChart('bmr', bodyscale, {bodyScale: 'bmr'});
-
   }
 }
 

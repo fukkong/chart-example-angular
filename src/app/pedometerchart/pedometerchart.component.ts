@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import * as moment from 'moment';
-import {PedometerDaySummary, PedometerTimeSegment} from '@AutochekCommon/vanilla/objects/device-data-object';
+import {PedometerDaySummary, PedometerTimeSegment} from 'autochek-base//objects/device-data-object';
 import {drawPedometerChart} from '@AutochekChart/pedometer-chart';
 
 @Component({

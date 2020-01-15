@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {drawHeartRateChart, drawSecondHeartRateChart} from '@AutochekChart/heart-rate-chart';
-import {PedometerHeartrateSegment} from '@AutochekCommon/vanilla/objects/device-data-object';
+import {PedometerHeartrateSegment} from 'autochek-base//objects/device-data-object';
 
 @Component({
   selector: 'app-heartratechart',
